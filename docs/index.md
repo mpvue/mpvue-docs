@@ -39,7 +39,7 @@ Owl.start({
 
 ### H5 和小程序如何复用代码
 先来看一段视频：
-<video src="./assets/20170810-022809-HD.mp4" width="863" height="480" controls="controls"></video>
+<video src="./assets/20170810-022809-HD.mp4" width="100%" height="auto" controls="controls"></video>
 
 在左侧为已经上线的 H5 页面，右侧为同代码的小程序页面，其中只需要更改小部分平台差异代码和更新下 webpack 的建构配置就可以直接运行。
 

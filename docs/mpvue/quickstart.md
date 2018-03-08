@@ -67,6 +67,6 @@ $ npm run dev
 
 用自己趁手的编辑器（或者IDE）打开 `my-project` 中的 `src` 目录下的代码试试，如示例：
 
-<video src="../../assets/quick-start/dev.mp4" width="863" height="480" controls="controls"></video>
+<video src="../../assets/quick-start/dev.mp4" width="100%" height="auto" controls="controls"></video>
 
 到此，上手完毕。
