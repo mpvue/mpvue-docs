@@ -1,0 +1,7 @@
+site_name: mpvue-docs
+site_url: http://mpvue.com/
+site_description: 'mpvue-docs'
+theme_dir: fedocs
+site_favicon: 'assets/favicon.ico'
+extra:
+  css: 'assets/style.css'

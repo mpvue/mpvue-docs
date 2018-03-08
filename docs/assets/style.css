@@ -1,0 +1,6 @@
+#logo {
+  padding-left: 45px;
+  background-image: url('./logo.png');
+  background-size: 40px;
+  background-repeat: no-repeat;
+}
