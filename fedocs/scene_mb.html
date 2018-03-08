@@ -1,0 +1,13 @@
+<div class="scene scene_mb dark" style="{% if r.background %}background-image: url({{r.background}});{% endif %}{% if r.styles %}{{r.styles}}{% endif %}" >
+    <h2>{{ r.title }}</h2>
+    <div class="subtitle">{{ r.subtitle }}</div>
+    <div class="description">{{ r.description }}</div>
+    {% if r.links %}
+    <div class="btn-list clearfix">
+    {% for link in r.links %}
+        <a class="link" href="{{link.link}}">{{link.label}}</a>
+    {% endfor %}
+        <!-- <a class="btn btn-line-red" target="_blank" href="http://www.mi.com/static/stores/">实体店购买</a> --> 
+    </div>
+    {% endif %}
+</div>

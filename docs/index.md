@@ -10,11 +10,11 @@ Owl.start({
 
 <img src="assets/logo.png" width="80">
 
-`mpvue` 是一个使用 [Vue.js](https://vuejs.org) 开发小程序的前端框架。框架基于 `Vue.js` 核心，`mpvue` 修改了 `Vue.js` 的 [runtime](/mpvue) 和 [compiler](/mpvue-template-compiler) 实现，使其可以运行在小程序环境中，从而为小程序开发引入了整套 `Vue.js` 开发体验。
+`mpvue` （[github 地址请参见](https://github.com/Meituan-Dianping/mpvue)）是一个使用 [Vue.js](https://vuejs.org) 开发小程序的前端框架。框架基于 `Vue.js` 核心，`mpvue` 修改了 `Vue.js` 的 [runtime](/mpvue) 和 [compiler](/mpvue-template-compiler) 实现，使其可以运行在小程序环境中，从而为小程序开发引入了整套 `Vue.js` 开发体验。
 
 ## 实践案例
 
-美团旗下小程序：`美团汽车票` 和 `美团充电`，此外，正有一大批小程序正在接入中。
+美团点评旗下小程序：`美团汽车票` 和 `美团充电`，此外，正有一大批小程序正在接入中。
 
 ## 快速开始
 

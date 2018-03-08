@@ -1,0 +1,14 @@
+{% if not nav_item.children %}
+    {% if nav_item.title != "hidden" %}
+    <li><a href="{{ nav_item.url }}" class="nav-link">{{ nav_item.title }}</a></li>
+    {% endif %}
+{% else %}
+<li class="nav-dropdown-container">
+  <a class="nav-link {% if nav_item.active %}current{% endif %}">{{ nav_item.title }}</a>
+  <ul class="nav-dropdown">
+    {% for nav_item in nav_item.children %}
+        {% include "nav-sub.html" %}
+    {% endfor %}
+  </ul>
+</li>
+{% endif %}
