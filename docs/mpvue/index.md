@@ -12,7 +12,7 @@ Owl.start({
 
 本文档适用于有一定 `Vue.js` 使用经验的开发者。我们默认你已经掌握 `Vue.js` 技术体系，**如果你是新手**，你可能需要先熟悉 [Vue.js 官方文档](https://cn.vuejs.org/guide/)。
 
-## 三分钟教程
+## 五分钟教程
 
 通过 `Vue.js` 命令行工具 [vue-cli](https://github.com/vuejs/vue-cli)，你只需在终端窗口输入几条简单命令，即可快速创建和启动一个带热重载、保存时静态检查、内置代码构建功能的小程序项目：
 
@@ -252,7 +252,7 @@ Class 与 Style 绑定的实现方式为使用正则匹配将 `v-bind:class="{ a
 
 详细的不支持列表：
 
-- 不支持在 **组件** 在上定义 click 等原生事件和 class style 等样式属性，因为编译到 wxml，小程序不会生成节点，建议写在内部顶级元素上。
+- 暂不支持在组件引用时，在组件上上定义 click 等原生事件和 class style 等样式属性(例：`<card class="class-name"> </card>` 样式是不会生效的)，因为编译到 wxml，小程序不会生成节点，建议写在内部顶级元素上。
 - Slot（scoped 暂时还没做支持）
 - 动态组件
 - 异步组件
