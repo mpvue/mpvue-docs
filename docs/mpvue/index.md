@@ -252,7 +252,7 @@ Class 与 Style 绑定的实现方式为使用正则匹配将 `v-bind:class="{ a
 
 详细的不支持列表：
 
-- 暂不支持在组件引用时，在组件上上定义 click 等原生事件和 class style 等样式属性(例：`<card class="class-name"> </card>` 样式是不会生效的)，因为编译到 wxml，小程序不会生成节点，建议写在内部顶级元素上。
+- 暂不支持在组件引用时，在组件上定义 click 等原生事件、v-show（可用 v-if 代替）和 class style 等样式属性(例：`<card class="class-name"> </card>` 样式是不会生效的)，因为编译到 wxml，小程序不会生成节点，建议写在内部顶级元素上。
 - Slot（scoped 暂时还没做支持）
 - 动态组件
 - 异步组件
