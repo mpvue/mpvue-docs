@@ -10,7 +10,7 @@ mpvue QuickStart 只支持项目级应用开发，对 Page 级和自定义组件
 
 ``` bash
 # install by global
-mnpm i mpvue-simple -g
+npm i mpvue-simple -g
 
 # create an *.vue SFC
 echo -e '<template><h1>Hello {{msg}}!</h1></template>\n<script>\nexport default {\n  data () {\n    return { msg: 233 }\n  }\n}\n</script>\n<style>\n  h1 {\n    color: red;\n  }\n</style>' > App.vue
