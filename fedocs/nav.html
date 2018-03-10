@@ -15,7 +15,7 @@
     {% for nav_item in nav %}
         {% if nav_item.children %}
         <li class="nav-dropdown-container">
-          <a class="nav-link">{{ nav_item.title }}</a><span class="arrow"></span>
+          <a class="nav-link" href="{{nav_item.children[0].url}}">{{ nav_item.title }}</a><span class="arrow"></span>
           <ul class="nav-dropdown">
             {% for nav_item in nav_item.children %}
                 {% include "nav-sub.html" %}

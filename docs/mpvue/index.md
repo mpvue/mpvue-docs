@@ -146,11 +146,11 @@ Class 与 Style 绑定的实现方式为使用正则匹配将 `v-bind:class="{ a
 ```html
 <template>
     <!-- 支持 -->
-    <div class="container {{ computedClassStr }}"></div>
+    <div class="container" :class="computedClassStr"></div>
     <div class="container" :class="{active: isActive}"></div>
 
     <!-- 不支持 -->
-    <div class="container {{ computedClassObject }}"></div>
+    <div class="container" :class="computedClassObject"></div>
 </template>
 <script>
     export default {

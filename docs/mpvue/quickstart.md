@@ -70,3 +70,7 @@ $ npm run dev
 <video src="../../assets/quick-start/dev.mp4" width="100%" height="auto" controls="controls"></video>
 
 到此，上手完毕。
+
+## 注意事项
+
+1. 新增的页面需要重新 `npm run dev` 来进行编译
