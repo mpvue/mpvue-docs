@@ -136,7 +136,7 @@ vueApp.$mount();
 export default {
     // 这个字段下的数据会被填充到 app.json ／ page.json
     config: {
-        pages: ['static/calendar/calendar'， '^pages/list/list'], // Will be filled in webpack
+        pages: ['static/calendar/calendar', '^pages/list/list'], // Will be filled in webpack
         window: {
             backgroundTextStyle: 'light',
             navigationBarBackgroundColor: '#455A73',
