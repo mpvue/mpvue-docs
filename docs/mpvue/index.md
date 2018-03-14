@@ -138,10 +138,47 @@ new Vue({
 支持 [官方文档：计算属性](https://cn.vuejs.org/v2/guide/computed.html)。
 
 ## Class 与 Style 绑定
-Class 与 Style 绑定的实现方式为使用正则匹配将 `v-bind:class="{ active: isActive, 'text-danger': hasError }"` 转化为 `class="{{isActive? 'active' : ''}} {{hasError ? 'text-danger' : ''}}"`, 正则的可靠性并不是很高，不建议这种写法，
-不是不支持 [官方文档：Class 与 Style 绑定](https://cn.vuejs.org/v2/guide/class-and-style.html)，而是不支持部分特复杂的表达式。最佳实践用计算属性（computed）实现返回字符串。
+为节约性能，我们将 Class 与 Style 的表达式通过 compiler 硬编码到 wxml 中，支持语法和转换效果如下：
 
-举例说明：
+class 支持的语法:
+
+```
+<p :class="{ active: isActive }">111</p>
+<p class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">222</p>
+<p class="static" :class="[activeClass, errorClass]">333</p>
+<p class="static" v-bind:class="[isActive ? activeClass : '', errorClass]">444</p>
+<p class="static" v-bind:class="[{ active: isActive }, errorClass]">555</p>
+```
+
+将分别被转换成:
+
+```
+<view class="_p {{[isActive ? 'active' : '']}}">111</view>
+<view class="_p static {{[isActive ? 'active' : '', hasError ? 'text-danger' : '']}}">222</view>
+<view class="_p static {{[activeClass, errorClass]}}">333</view>
+<view class="_p static {{[isActive ? activeClass : '', errorClass]}}">444</view>
+<view class="_p static {{[[isActive ? 'active' : ''], errorClass]}}">555</view>
+```
+
+style 支持的语法:
+
+```
+<p v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">666</p>
+<p v-bind:style="[{ color: activeColor, fontSize: fontSize + 'px' }]">777</p>
+```
+
+将分别被转换成:
+
+```
+<view class="_p" style=" {{'color:' + activeColor + ';' + 'font-size:' + fontSize + 'px' + ';'}}">666</view>
+<view class="_p" style=" {{'color:' + activeColor + ';' + 'font-size:' + fontSize + 'px' + ';'}}">777</view>
+```
+
+不支持 [官方文档：Class 与 Style 绑定](https://cn.vuejs.org/v2/guide/class-and-style.html) 中的 `classObject` 和 `styleObject` 语法。
+
+最佳实践见上文支持的语法，**从性能考虑，建议不要过度依赖此。**
+
+此外还可以用 computed 方法生成 class 或者 style 字符串，插入到页面中，举例说明：
 
 ```html
 <template>
@@ -240,6 +277,78 @@ Class 与 Style 绑定的实现方式为使用正则匹配将 `v-bind:class="{ a
 
 ## 表单控件绑定
 几乎全支持 [官方文档：表单控件绑定](https://cn.vuejs.org/v2/guide/forms.html)，不支持的还没测出来，之所以说几乎，是因为 WEB 表单这么复杂，谁特么知道会出什么奇怪的特性。
+
+建议开发过程中直接使用 [微信小程序：表单组件](https://mp.weixin.qq.com/debug/wxadoc/dev/component/button.html) 。用法示例：
+
+[select 组件用 picker 组件进行代替](https://github.com/Meituan-Dianping/mpvue/issues/58)
+
+``` html
+<template>
+  <div>
+    <picker @change="bindPickerChange" :value="index" :range="array">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      index: 0,
+      array: ['A', 'B', 'C']
+    }
+  },
+  methods: {
+    bindPickerChange (e) {
+      console.log(e)
+    }
+  }
+}
+
+</script>
+```
+
+[表单元素 radio 用 radio-group 组件进行代替](https://github.com/Meituan-Dianping/mpvue/issues/66)
+
+``` html
+<template>
+  <div>
+    <radio-group class="radio-group" @change="radioChange">
+      <label class="radio" v-for="(item, index) in items" :key="item.name">
+        <radio :value="item.name" :checked="item.checked"/> {{item.value}}
+      </label>
+    </radio-group>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      items: [
+        {name: 'USA', value: '美国'},
+        {name: 'CHN', value: '中国', checked: 'true'},
+        {name: 'BRA', value: '巴西'},
+        {name: 'JPN', value: '日本'},
+        {name: 'ENG', value: '英国'},
+        {name: 'TUR', value: '法国'}
+      ]
+    }
+  },
+  methods: {
+    radioChange (e) {
+      console.log('radio发生change事件，携带value值为：', e.target.value)
+    }
+  }
+}
+
+</script>
+
+```
+
 
 ## 组件
 
