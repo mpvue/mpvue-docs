@@ -73,14 +73,17 @@ npm i mpvue-template-compiler mpvue-loader mpvue-webpack-target postcss-mpvue-wx
 你也可以通过指定项目 `.npmrc` 从而在安装过程中的避免设置镜像源。
 
 ### 入口和(Entry)
+
+> mpvue-loader 1.0.7+
+
 项目的源代码通过 webpack 配置的 entry 来识别页面入口，示例如下：
 ``` javascript
 {
     // ...
     entry: {
         app: resolve('./src/main.js'),               // app 字段被识别为 app 类型
-        list: resolve('./src/pages/list/main.js'),   // 其余字段被识别为 page 类型
-        page1: resolve('./src/pages/page1/main.js')
+        'list/main': resolve('./src/pages/list/main.js'),   // 其余字段被识别为 page 类型
+        'page1/main': resolve('./src/pages/page1/main.js')
     }
 }
 ```
@@ -239,14 +242,12 @@ require('webpack-dev-middleware-hard-disk')(compiler, {
 
 ### 提醒
 
-#### 关闭 sourceMap。
-建议关闭 `config/index.js` 中 `productionSourceMap` ，因为会造成打包后的总文件过大。
-
 #### 建构中 NODE_ENV 环境配置
+
 最简单的配置环境变量的方式，解决报错程度和是否生成单独的 wxss 等。
 
 ```
-"build": "NODE_ENV=production gulp build",
+process.env.NODE_ENV = 'production'
 ```
 
 #### 增加 .eslintrc.js 全局白名单
