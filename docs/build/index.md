@@ -268,5 +268,11 @@ require('webpack-dev-middleware-hard-disk')(compiler, {
 ### 开发调试
 build 后的可以运行的代码请直接用 `微信 web 开发者工具` 打开进行调试。若对其不熟悉，可以看相关文档：[开发者工具](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/devtools.html)。
 
+### Debug
+
+> mpvue-loader 1.0.7+ 
+
+关闭微信开发者工具的 ES6 转 ES5 ，就可以打 debug 啦，如图：
+![debug](../assets/debug.jpg)
 ### 真机调试
 真机调试的时候必须要 AppID，[获取微信小程序的 AppID](https://mp.weixin.qq.com/debug/wxadoc/dev/)。

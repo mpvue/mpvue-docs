@@ -27,8 +27,8 @@ mpvue-loader 是 vue-loader 的一个扩展延伸版，类似于超集的关系�
     // ...
     entry: {
         app: resolve('./src/main.js'),               // app 字段被识别为 app 类型
-        list: resolve('./src/pages/list/main.js'),   // 其余字段被识别为 page 类型
-        page1: resolve('./src/pages/page1/main.js')
+        index: resolve('./src/pages/index/main.js'),   // 其余字段被识别为 page 类型
+        'news/home': resolve('./src/pages/news/home/index.js')
     }
 }
 
@@ -38,30 +38,30 @@ mpvue-loader 是 vue-loader 的一个扩展延伸版，类似于超集的关系�
 ├── app.json
 ├── app.wxss
 ├── components
-│   ├── list$018c4df0.wxml
-│   ├── page1$23e58823.wxml
+│   ├── card$74bfae61.wxml
+│   ├── index$023eef02.wxml
+│   └── news$0699930b.wxml
+├── news
+│   ├── home.js
+│   ├── home.wxml
+│   └── home.wxss
 ├── pages
-│   ├── list
-│   │   ├── list.js
-│   │   ├── list.json
-│   │   ├── list.wxml
-│   │   └── list.wxss
-│   └── page1
-│       ├── page1.js
-│       ├── page1.json
-│       ├── page1.wxml
-│       └── page1.wxss
+│   └── index
+│       ├── index.js
+│       ├── index.wxml
+│       └── index.wxss
 └── static
-    ├── assets
     ├── css
-    │   ├── app.wxss
-    │   ├── list.wxss
-    │   └── page1.wxss
+    │   ├── app.wxss
+    │   ├── index.wxss
+    │   └── news
+    │       └── home.wxss
     └── js
         ├── app.js
-        ├── list.js
-        ├── page1.js
+        ├── index.js
         ├── manifest.js
+        ├── news
+        │   └── home.js
         └── vendor.js
 ```
 
