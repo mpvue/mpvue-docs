@@ -9,10 +9,10 @@
 
 ``` bash
 # 本地预览
-# 先安装 http://www.mkdocs.org/
+# 先安装 mkdocs，了解更多：http://www.mkdocs.org/
+# 选择版本 0.16.3，pip install mkdocs==0.16.3
 # 然后
 mkdocs serve
-
 ```
 
 bug 或者交流建议等请反馈到 [mpvue/issues](https://github.com/Meituan-Dianping/mpvue/issues)。
