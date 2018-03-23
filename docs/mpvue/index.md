@@ -137,6 +137,10 @@ new Vue({
 ## 计算属性
 支持 [官方文档：计算属性](https://cn.vuejs.org/v2/guide/computed.html)。
 
+## 不支持函数
+
+不支持在 template 内使用 methods 中的函数。
+
 ## Class 与 Style 绑定
 为节约性能，我们将 Class 与 Style 的表达式通过 compiler 硬编码到 wxml 中，支持语法和转换效果如下：
 
