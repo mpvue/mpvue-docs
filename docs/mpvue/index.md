@@ -269,7 +269,7 @@ style 支持的语法:
 
 **踩坑注意：**
 
-- 列表中没有的原生事件也可以使用例如 bindregionchange 事件直接在 dom 上将bind改为@ `@regionchange`,同时这个事件也非常特殊，它的 event type 有 start 和 end 两个，导致我们无法在`handleProxy` 中区分到底是什么事件，所以你在监听此类事件的时候同时监听事件名和事件类型既 `<map @regionchange="functionName" @end="functionName" @start="functionName"><map>`
+- 列表中没有的原生事件也可以使用例如 bindregionchange 事件直接在 dom 上将bind改为@ `@regionchange`,同时这个事件也非常特殊，它的 event type 有 begin 和 end 两个，导致我们无法在`handleProxy` 中区分到底是什么事件，所以你在监听此类事件的时候同时监听事件名和事件类型既 `<map @regionchange="functionName" @end="functionName" @begin="functionName"><map>`
 - 小程序能力所致，bind 和 catch 事件同时绑定时候，只会触发 bind ,catch 不会被触发，要避免踩坑。
 - 事件修饰符
     + `.stop` 的使用会阻止冒泡，但是同时绑定了一个非冒泡事件，会导致该元素上的 catchEventName 失效！
