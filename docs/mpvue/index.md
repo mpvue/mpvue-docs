@@ -110,9 +110,9 @@ new Vue({
 ## 模板语法
 几乎全支持 [官方文档：模板语法](https://cn.vuejs.org/v2/guide/syntax.html)，下面讲下不支持的情况。
 
-### 不支持 `纯-HTML`
+### 支持部分 `V-HTML`
 
-小程序里所有的 BOM／DOM 都不能用，也就是说 `v-html` 指令不能用。
+会将使用了 `v-html` 指令转化为小程序的 [rich-text](https://developers.weixin.qq.com/miniprogram/dev/component/rich-text.html) `1.0.9`
 
 ### 不支持部分复杂的 JavaScript 渲染表达式
 我们会把 template 中的 `{{}}` 双花括号的部分，直接编码到 wxml 文件中，由于微信小程序的能力限制([数据绑定](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/data.html))，所以无法支持复杂的 JavaScript 表达式。
@@ -274,7 +274,7 @@ style 支持的语法:
 - 事件修饰符
     + `.stop` 的使用会阻止冒泡，但是同时绑定了一个非冒泡事件，会导致该元素上的 catchEventName 失效！
     + `.prevent` 可以直接干掉，因为小程序里没有什么默认事件，比如submit并不会跳转页面
-    + `.capture` 不能做，因为小程序没有捕获类型的事件
+    + `.capture` 支持 `1.0.9`
     + `.self` 没有可以判断的标识
     + `.once` 也不能做，因为小程序没有 removeEventListener, 虽然可以直接在 handleProxy 中处理，但非常的不优雅，违背了原意，暂不考虑
 - 其他 键值修饰符 等在小程序中压根没键盘，所以。。。
