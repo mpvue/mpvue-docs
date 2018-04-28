@@ -224,7 +224,7 @@ style 支持的语法:
 
 示例：
 ``` html
-<!-- 在这种嵌套循环的时候， index 和 itemIndex 这种索引是必须指定，且别名不能想同，正确的写法如下 -->
+<!-- 在这种嵌套循环的时候， index 和 itemIndex 这种索引是必须指定，且别名不能相同，正确的写法如下 -->
 <template>
     <ul v-for="(card, index) in list">
         <li v-for="(item, itemIndex) in card">
