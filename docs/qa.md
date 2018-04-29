@@ -56,4 +56,50 @@ export default {
 
 ## 为什么有些组件名不可以使用 
 
-`template,script,style,element,content,slot,link,meta,svg,view,a,div,img,image,text,span,richtext,input,switch,textarea,spinner,select,slider,slider-neighbor,indicator,trisition,trisition-group,canvas,list,cell,header,loading,loading-indicator,refresh,scrollable,scroller,video,web,embed,tabbar,tabheader,datepicker,timepicker,marquee,countdown`为保留关键字，暂不支持作为组件名
+以下为保留关键字，暂不支持作为组件名：
+
+- `a`
+- `canvas`
+- `cell`
+- `content`
+- `countdown`
+- `datepicker`
+- `div`
+- `element`
+- `embed`
+- `header`
+- `image`
+- `img`
+- `indicator`
+- `input`
+- `link`
+- `list`
+- `loading-indicator`
+- `loading`
+- `marquee`
+- `meta`
+- `refresh`
+- `richtext`
+- `script`
+- `scrollable`
+- `scroller`
+- `select`
+- `slider-neighbor`
+- `slider`
+- `slot`
+- `span`
+- `spinner`
+- `style`
+- `svg`
+- `switch`
+- `tabbar`
+- `tabheader`
+- `template`
+- `text`
+- `textarea`
+- `timepicker`
+- `trisition-group`
+- `trisition`
+- `video`
+- `view`
+- `web`
