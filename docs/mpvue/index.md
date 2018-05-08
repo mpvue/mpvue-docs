@@ -390,6 +390,10 @@ mpvue 可以支持小程序的原生组件，比如： `picker,map` 等，需要
 </picker>
 ```
 
+## TypeScript支持
+
+目前`mpvue-loader`是可以支持TypeScript选项的，配置方法[在此](/build/mpvue-loader/#typescript)。具体Demo可以见[mpvue-ts-demo](https://github.com/WingGao/mpvue-ts-demo)
+
 ## 最佳实践
 
 **1. 精简 data 数据**
