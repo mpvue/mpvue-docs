@@ -198,3 +198,212 @@ export default {
 ### checkMPEntry
 在 [项目建构](/build/#module) 文档的这个部分，有讲到需要给所有 `js` 后缀文件增加 `mpvue-loader` ，并且需要加 options，通过这个配置，我们的 loader 才能知道 entry 进来的 js 和 vue 的类型是 app 还是 page，从而做了一些页面类型的区分。
 
+## TypeScript支持
+`mpvue-loader`目前支持用TypeScript来写，功能还在完善中(WIP)。目前实现了用`<script lang="ts" src="./xx.ts"></script>`这种方式的自动识别，并且需要搭配[vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)来使用。
+
+### 配置
+
+#### 添加对应的`loader`
+```js
+// webpack.conf.js
+module.exports = {
+  //...
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'mpvue-loader',
+        options: {
+          //...
+          ts: [ //添加对应vue的loader
+            'babel-loader',
+            {
+              // loader: 'ts-loader',
+              loader: 'awesome-typescript-loader',
+              options: {
+                // errorsAsWarnings: true,
+                useCache: true,
+              }
+            }
+          ]
+        }
+      },
+      // ts文件的loader
+      {
+        test: /\.tsx?$/, 
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+          {
+            loader: 'mpvue-loader',
+            options: {
+              checkMPEntry: true
+            }
+          },
+          {
+            // loader: 'ts-loader',
+            loader: 'awesome-typescript-loader',
+            options: {
+              // errorsAsWarnings: true,
+              useCache: true,
+            }
+          }
+        ]
+      },
+    ]
+  // ...
+  }
+```
+### main.ts
+```ts
+// main.ts
+import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator';
+import { VueConstructor } from "vue";
+
+interface IMpVue extends VueConstructor {
+  mpType: string
+}
+
+// 添加小程序hooks http://mpvue.com/mpvue/#_4
+Component.registerHooks([
+  // app
+  'onLaunch', // 初始化
+  'onShow', // 当小程序启动，或从后台进入前台显示
+  'onHide', // 当小程序从前台进入后台
+  // pages
+  'onLoad', // 监听页面加载
+  'onShow', // 监听页面显示
+  'onReady', // 监听页面初次渲染完成
+  'onHide', // 监听页面隐藏
+  'onUnload', // 监听页面卸载
+  'onPullDownRefresh', // 监听用户下拉动作
+  'onReachBottom', // 页面上拉触底事件的处理函数
+  'onShareAppMessage', // 用户点击右上角分享
+  'onPageScroll', // 页面滚动
+  'onTabItemTap', //当前是 tab 页时， 点击 tab 时触发 （mpvue 0.0.16 支持）
+])
+
+Vue.config.productionTip = false
+// 在这个地方引入是为了registerHooks先执行
+const MyApp = require('./App.vue').default as IMpVue
+const app = new Vue(MyApp)
+app.$mount()
+```
+### App.vue
+```vue
+<script lang="ts" src="./app.ts"></script>
+<style></style>
+```
+```ts
+//app.ts
+import { Vue, Component } from 'vue-property-decorator'
+declare module "vue/types/vue" {
+  interface Vue {
+    $mp: any;
+  }
+}
+
+// 必须使用装饰器的方式来指定components
+@Component({
+  mpType: 'app', // mpvue特定
+}as any)
+class App extends Vue {
+  // app hook
+  onLaunch() {
+    let opt = this.$root.$mp.appOptions
+  }
+
+  onShow() {
+  }
+
+  onHide() {
+  }
+
+  mounted() { // vue hook
+  }
+}
+
+export default App
+```
+### 页面
+```vue
+<!-- page.vue -->
+<template>
+  <div class="counter-warp">
+    <p>Mpvue</p>
+    <p>ts value {{ ver }}</p>
+    <card text="card component"></card>
+    <comp-b text="card component"></comp-b>
+    <a :href="AppUrls.COUNTER" class="home">去往vuex</a>
+  </div>
+</template>
+<!--必须指定为ts-->
+<script lang="ts" src="./index.ts"></script>
+<style></style>
+```
+```ts
+// index.ts
+import { Vue, Component } from 'vue-property-decorator'
+import Card from '@/components/card.vue' // mpvue目前只支持的单文件组件
+import CompB from '@/components/compb.vue' // mpvue目前只支持的单文件组件
+// 必须使用装饰器的方式来指定component
+@Component({
+  components: {
+    Card,
+    CompB, //注意，vue的组件在template中的用法，`CompB` 会被转成 `comp-b`
+  },
+})
+class Index extends Vue {
+  ver: number = 123
+  
+  onShow() { // 小程序 hook
+  }
+
+  mounted() { // vue hook
+  }
+}
+
+export default Index
+```
+
+### 组件
+```vue
+<!-- card.vue -->
+<template>
+  <div>
+    <p class="card">
+      From Card {{text}} {{ver}}
+    </p>
+  </div>
+</template>
+<!--必须指定为ts-->
+<script lang="ts" src="./card.ts"></script>
+<style></style>
+```
+```ts
+// card.ts
+import { Vue, Component, Prop } from 'vue-property-decorator'
+// 必须使用装饰器的方式来指定component
+@Component
+class Card extends Vue {
+  @Prop({ default: '1' }) //注意用法！
+  text: string;
+  
+  ver: number = 2;
+
+  onShow() {
+  }
+
+  onHide() {
+  }
+
+  mounted() { // vue hook
+  }
+}
+
+export default CompB
+```
+
+### 示例Demo
+
+示例: [mpvue-ts-demo](https://github.com/WingGao/mpvue-ts-demo)
