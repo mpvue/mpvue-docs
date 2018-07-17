@@ -54,6 +54,7 @@ Owl.start({
 - [mpvue-webpack-target](/build/mpvue-webpack-target) webpack 构建目标
 - [postcss-mpvue-wxss](/build/postcss-mpvue-wxss) 样式代码转换预处理工具
 - [px2rpx-loader](/build/px2rpx-loader) 样式转化插件
+- [mpvue-lint](/build/mpvue-lint) 开发辅助插件，包括语法检查，内存检查等功能
 - 其它
 
 
