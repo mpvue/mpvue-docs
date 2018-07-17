@@ -14,6 +14,7 @@ pages:
 - [build/mpvue-webpack-target.md, Build ]
 - [build/postcss-mpvue-wxss.md, Build]
 - [build/px2rpx-loader.md, Build]
+- [build/mpvue-lint.md, Build]
 - [qa.md, Q&A]
 
 extra:
