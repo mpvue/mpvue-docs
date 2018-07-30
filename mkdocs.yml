@@ -15,7 +15,10 @@ pages:
 - [build/postcss-mpvue-wxss.md, Build]
 - [build/px2rpx-loader.md, Build]
 - [build/mpvue-lint.md, Build]
+- [build/webpack-mpvue-asset-plugin.md, Build]
 - [qa.md, Q&A]
+- [change-log/index.md, Change log]
+- [change-log/2018.7.24.md, '']
 
 extra:
   css: 'assets/style.css'

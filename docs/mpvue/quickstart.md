@@ -28,7 +28,7 @@ $ npm set registry https://registry.npm.taobao.org/
 
 # 3. 全局安装 vue-cli
 # 一般是要 sudo 权限的
-$ npm install --global vue-cli
+$ npm install --global vue-cli@2.9
 
 # 4. 创建一个基于 mpvue-quickstart 模板的新项目
 # 新手一路回车选择默认就可以了
@@ -70,6 +70,12 @@ $ npm run dev
 <video src="../../assets/quick-start/dev.mp4" width="100%" height="auto" controls="controls"></video>
 
 到此，上手完毕。
+
+## 4. 分包机制 `2018.7.23+`
+
+mpvue-loader 1.1.2-rc.2 之后，优化了 build 后的文件生成结构，生成的目录结构保持了源文件夹下的目录结构，有利于对分包的支持。
+
+## 5. webpack 配置
 
 ## 注意事项
 
