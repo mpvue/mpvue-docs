@@ -124,8 +124,16 @@ export default {
 这个部分的处理同 web 的处理差异不大，唯一不同在于通过配置生成 `.css` 为 `.wxss` ，其中的对于 css 的若干处理，在 [postcss-mpvue-wxss](/build/postcss-mpvue-wxss/) 和 [px2rpx-loader](/build/px2rpx-loader/) 这两部分的文档中又详细的介绍。
 
 ### app.json／page.json
+
+`1.1.1 以上`
+
+推荐和小程序一样，将 app.json／page.json 放到页面入口处，使用 copy-webpack-plugin copy 到对应的生成位置。
+
+`1.1.1 以下`
+
 这部分内容来源于 app 和 page 的 entry 文件，通常习惯是 main.js，你需要在你的入口文件中 `export default { config: {} }`，这才能被我们的 loader 识别为这是一个配置，需要写成 json 文件。
-``` javascript
+
+```javascript
 import Vue from 'vue';
 import App from './app';
 
