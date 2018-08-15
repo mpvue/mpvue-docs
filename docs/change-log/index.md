@@ -1,8 +1,12 @@
 # Change log
 
+## 2018.8.10
+
+发布 mpvue-loader@1.1.2
+
 ## 2018.7.30
 
-### mpvue-loader@1.1.2-rc4
+### mpvue-loader@1.1.2-rc5
 
 * 修复 slot 文件路径生成错误的问题
 
