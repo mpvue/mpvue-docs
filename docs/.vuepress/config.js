@@ -6,7 +6,7 @@ module.exports = {
   ],
   base: '/',
   themeConfig: {
-    repo: 'https://github.com/hucq/techthink',
+    repo: 'https://github.com/mpvue/mpvue-docs',
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: false,
