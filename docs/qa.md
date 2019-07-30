@@ -1,10 +1,8 @@
-<script crossorigin="anonymous" src="//www.dpfile.com/app/owl/static/owl_1.5.28.js"></script>
-<script>
-Owl.start({
-    project: 'mpvue-doc',
-    pageUrl: 'qa'
-})
-</script>
+---
+sidebar: true
+prev: false
+next: false
+---
 
 # 常见问题
 

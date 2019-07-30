@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "doc:dev": "vuepress dev docs",
+    "doc:build": "vuepress build docs"
+  },
+  "name": "mpvue-docs",
+  "description": "You can use the [editor on GitHub](https://github.com/mpvue/mpvue-docs/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mpvue/mpvue-docs.git"
+  },
+  "author": "hucq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meituan-Dianping/mpvue/issues"
+  },
+  "homepage": "https://github.com/mpvue/mpvue-docs#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.2"
+  }
+}

@@ -1,10 +1,8 @@
-<script crossorigin="anonymous" src="//www.dpfile.com/app/owl/static/owl_1.5.28.js"></script>
-<script>
-Owl.start({
-    project: 'mpvue-doc',
-    pageUrl: 'build/px2rpx-loader'
-})
-</script>
+---
+sidebar: true
+prev: false
+next: false
+---
 
 # px2rpx-loader
 

@@ -1,11 +1,8 @@
-<script crossorigin="anonymous" src="//www.dpfile.com/app/owl/static/owl_1.5.28.js"></script>
-<script>
-Owl.start({
-    project: 'mpvue-doc',
-    pageUrl: 'build/mpvue-loader'
-})
-</script>
-
+---
+sidebar: true
+prev: false
+next: false
+---
 
 # mpvue-loader
 
@@ -97,7 +94,11 @@ export default {
 </template>
 ```
 
-细心的开发者可能已经注意到了 `other-component(:msg="msg")` 被转化成了 `<template is="other-component$hash" data="{{ ...$c[0] }}"></template>` 。mpvue 在运行时会从根组件开始把所有的组件实例数据合并成一个树形的数据，然后通过 setData 到 appData,`$c` 是 `$children` 的缩写。至于那个 `0` 则是我们的 compiler 处理过后的一个标记，会为每一个子组件打一个特定的不重复的标记。
+细心的开发者可能已经注意到了 `other-component(:msg="msg")` 被转化成了 
+``` html
+<template is="other-component$hash" data="{{ ...$c[0] }}"></template>
+```
+mpvue 在运行时会从根组件开始把所有的组件实例数据合并成一个树形的数据，然后通过 setData 到 appData,`$c` 是 `$children` 的缩写。至于那个 `0` 则是我们的 compiler 处理过后的一个标记，会为每一个子组件打一个特定的不重复的标记。
 树形数据结构如下：
 
 ``` javascript

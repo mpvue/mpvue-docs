@@ -1,3 +1,9 @@
+---
+sidebar: true
+prev: false
+next: false
+---
+
 # mpvue-simple
 
 辅助 mpvue 快速开发 Page 级小程序页面的工具，所以也需要有一定的小程序开发经验。

@@ -1,3 +1,9 @@
+---
+sidebar: true
+prev: false
+next: false
+---
+
 # webpack-mpvue-plugin
 
 > mpvue 资源路径解析插件

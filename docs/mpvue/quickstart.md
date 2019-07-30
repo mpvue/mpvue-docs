@@ -1,10 +1,8 @@
-<script crossorigin="anonymous" src="//www.dpfile.com/app/owl/static/owl_1.5.28.js"></script>
-<script>
-Owl.start({
-    project: 'mpvue-doc',
-    pageUrl: 'mpvue/quickstart'
-})
-</script>
+---
+sidebar: true
+prev: false
+next: false
+---
 
 # 快速上手
 
@@ -57,17 +55,17 @@ $ npm run dev
 
 如图：
 
-<img src="../../assets/quick-start/1.png" width="300" alt="小程序项目配置">
+<img src="../assets/quick-start/1.png" width="300" alt="小程序项目配置">
 
 点击“确定”按钮后会跳到正式的开发页面，点击“编辑器”按钮，关闭自带的小程序编辑器。然后如图：
 
-<img src="../../assets/quick-start/2.png" width="600" alt="mpvue-start">
+<img src="../assets/quick-start/2.png" width="600" alt="mpvue-start">
 
 此时，整个 `mpvue` 项目已经跑起来了。
 
 用自己趁手的编辑器（或者IDE）打开 `my-project` 中的 `src` 目录下的代码试试，如示例：
 
-<video src="../../assets/quick-start/dev.mp4" width="100%" height="auto" controls="controls"></video>
+<video src="../assets/quick-start/dev.mp4" width="100%" height="auto" controls="controls"></video>
 
 到此，上手完毕。
 

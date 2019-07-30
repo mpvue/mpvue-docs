@@ -1,11 +1,8 @@
-<script crossorigin="anonymous" src="//www.dpfile.com/app/owl/static/owl_1.5.28.js"></script>
-<script>
-Owl.start({
-    project: 'mpvue-doc',
-    pageUrl: 'index'
-})
-</script>
-<center><img src="assets/logo.png" width="120"></center>
+---
+sidebar: true
+---
+
+<center><img src="./assets/logo.png" width="120"></center>
 <center><img src="https://img.shields.io/npm/v/mpvue.svg?style=flat"> &nbsp;<img src="https://img.shields.io/npm/dm/mpvue.svg?style=flat"></center>
 
 # 介绍
@@ -56,5 +53,4 @@ Owl.start({
 - [px2rpx-loader](/build/px2rpx-loader) 样式转化插件
 - [mpvue-lint](/build/mpvue-lint) 开发辅助插件，包括语法检查，内存检查等功能
 - 其它
-
-
+- [qa](/qa)

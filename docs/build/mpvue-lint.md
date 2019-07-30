@@ -1,3 +1,9 @@
+---
+sidebar: true
+prev: false
+next: false
+---
+
 # mpvue-lint
 
 >针对很多需要h5和小程序页面同构开发的场景，开发者会出现很多h5的vue组件直接搬到mpvue中调试的开发流程。虽然mpvue支持大部分的vue语法，但是仍有些边界
@@ -28,7 +34,7 @@ mpvueLint.build(
 lint检查非强制阻拦编译过程，FE同学自己根据提醒修改业务代码
 
 运行结果如图：</br>
-<img src="../../assets/mpvue-lint/1.png" width="800" alt="语法检查">
+<img src="../assets/mpvue-lint/1.png" width="800" alt="语法检查">
 
 # mpvue-trace 内存检查
 >内存检查模块,mpvue-trace辅助开发者检查操作时数据更新的变化，因为最后小程序更新数据需要调用setData接口，而setData小程序真机是
@@ -49,6 +55,6 @@ mpvueTrace.trace(Vue); //Vue是当前页面中的Vue实例
 > mpvue-lint的源码已在github上开源[github 地址请参见](https://github.com/mpvue/mpvue-lint) 欢迎开发者们根据自己项目的情况灵活增减功能
 
 源码基本原理图：</br>
-<img src="../../assets/mpvue-lint/2.jpg" style="margin:0 auto;display:block;" width="400" alt="语法检查流程">
+<img src="../assets/mpvue-lint/2.jpg" style="margin:0 auto;display:block;" width="400" alt="语法检查流程">
 
 

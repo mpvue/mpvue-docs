@@ -1,3 +1,9 @@
+---
+sidebar: true
+prev: false
+next: false
+---
+
 # Change log
 
 ## 2018.8.10
