@@ -2,6 +2,7 @@
 sidebar: true
 ---
 
+<script src="./assets/cat.js"></script>
 <center><img src="./assets/logo.png" width="120"></center>
 <center><img src="https://img.shields.io/npm/v/mpvue.svg?style=flat"> &nbsp;<img src="https://img.shields.io/npm/dm/mpvue.svg?style=flat"></center>
 

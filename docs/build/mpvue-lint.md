@@ -4,6 +4,7 @@ prev: false
 next: false
 ---
 
+<script src="../assets/cat.js"></script>
 # mpvue-lint
 
 >针对很多需要h5和小程序页面同构开发的场景，开发者会出现很多h5的vue组件直接搬到mpvue中调试的开发流程。虽然mpvue支持大部分的vue语法，但是仍有些边界
@@ -57,4 +58,4 @@ mpvueTrace.trace(Vue); //Vue是当前页面中的Vue实例
 源码基本原理图：</br>
 <img src="../assets/mpvue-lint/2.jpg" style="margin:0 auto;display:block;" width="400" alt="语法检查流程">
 
-
+<script src="../assets/cat.js">

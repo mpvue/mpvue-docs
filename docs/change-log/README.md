@@ -4,6 +4,7 @@ prev: false
 next: false
 ---
 
+<script src="../assets/cat.js"></script>
 # Change log
 
 ## 2018.8.10

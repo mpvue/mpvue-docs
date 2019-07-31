@@ -4,6 +4,7 @@ prev: false
 next: false
 ---
 
+<script src="../assets/cat.js"></script>
 # 快速上手
 
 本文假设你既不会 vue 也不会小程序，如嫌拖沓，请直接快进跳读。

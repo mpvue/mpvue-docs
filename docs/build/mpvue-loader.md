@@ -4,6 +4,7 @@ prev: false
 next: false
 ---
 
+<script src="../assets/cat.js"></script>
 # mpvue-loader
 
 >我们是在 [vue-loader](https://github.com/vuejs/vue-loader) 上做的修改，增加了建构到`微信小程序` 的若干能力。除此之外与原 [vue-loader 文档](https://vue-loader.vuejs.org/) 保持一致，所以本文档只列下修改的地方。

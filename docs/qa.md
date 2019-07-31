@@ -4,6 +4,7 @@ prev: false
 next: false
 ---
 
+<script src="./assets/cat.js"></script>
 # 常见问题
 
 > 如果这篇文档没找到您想要的内容，请到 [mpvue/issues](https://github.com/Meituan-Dianping/mpvue/issues) 进行查找。
