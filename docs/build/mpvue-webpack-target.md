@@ -4,7 +4,6 @@ prev: false
 next: false
 ---
 
-<script src="../assets/cat.js"></script>
 # mpvue-webpack-target
 
 >专为微信小程序做的 webpack 的 构建目标(Targets)。

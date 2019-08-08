@@ -4,7 +4,6 @@ prev: false
 next: false
 ---
 
-<script src="../assets/cat.js"></script>
 # webpack-mpvue-plugin
 
 > mpvue 资源路径解析插件

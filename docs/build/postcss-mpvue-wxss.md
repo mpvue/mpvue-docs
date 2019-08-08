@@ -4,7 +4,6 @@ prev: false
 next: false
 ---
 
-<script src="../assets/cat.js"></script>
 # PostCSS Wxss
 
 [PostCSS] plugin for wxss.

@@ -4,7 +4,6 @@ prev: false
 next: false
 ---
 
-<script src="../assets/cat.js"></script>
 # 使用手册
 
 `mpvue` 继承自 `Vue.js`，其技术规范和语法特点与 `Vue.js` 保持一致。

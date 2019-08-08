@@ -4,7 +4,6 @@ prev: false
 next: false
 ---
 
-<script src="../assets/cat.js"></script>
 # 项目建构
 
 ## 开始
