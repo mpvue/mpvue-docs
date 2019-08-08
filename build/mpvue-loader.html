@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mpvue-loader | mpvue.com</title>
+    <meta name="description" content="mpvue document">
+    <link rel="icon" href="/">
+    
+    <link rel="preload" href="/assets/css/0.styles.74efe9eb.css" as="style"><link rel="preload" href="/assets/js/app.a1edbc94.js" as="script"><link rel="preload" href="/assets/js/2.46a8cc8f.js" as="script"><link rel="preload" href="/assets/js/10.949dbce8.js" as="script"><link rel="prefetch" href="/assets/js/11.8ac6c847.js"><link rel="prefetch" href="/assets/js/12.3b6cae60.js"><link rel="prefetch" href="/assets/js/13.8ff1c8cc.js"><link rel="prefetch" href="/assets/js/14.5a93798e.js"><link rel="prefetch" href="/assets/js/15.741006f7.js"><link rel="prefetch" href="/assets/js/16.6d02a83c.js"><link rel="prefetch" href="/assets/js/17.484d30f7.js"><link rel="prefetch" href="/assets/js/18.64d363ba.js"><link rel="prefetch" href="/assets/js/19.de18fd24.js"><link rel="prefetch" href="/assets/js/20.81d6f0f4.js"><link rel="prefetch" href="/assets/js/3.961a0028.js"><link rel="prefetch" href="/assets/js/4.f0211d18.js"><link rel="prefetch" href="/assets/js/5.de0be79b.js"><link rel="prefetch" href="/assets/js/6.832a6703.js"><link rel="prefetch" href="/assets/js/7.136e585d.js"><link rel="prefetch" href="/assets/js/8.96ebf015.js"><link rel="prefetch" href="/assets/js/9.67895574.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.74efe9eb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">mpvue.com</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/qa.html" class="nav-link">Q&amp;A</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">build</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/build/index.html" class="nav-link">index</a></li><li class="dropdown-item"><!----> <a href="/build/mpvue-webpack-target.html" class="nav-link">mpvue-webpack-target</a></li><li class="dropdown-item"><!----> <a href="/build/postcss-mpvue-wxss.html" class="nav-link">postcss-mpvue-wxss</a></li><li class="dropdown-item"><!----> <a href="/build/px2rpx-loader.html" class="nav-link">px2rpx-loader</a></li><li class="dropdown-item"><!----> <a href="/build/mpvue-lint.html" class="nav-link">mpvue-lint</a></li><li class="dropdown-item"><!----> <a href="/build/webpack-mpvue-asset-plugin.html" class="nav-link">webpack-mpvue-asset-plugin</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">mpvue</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mpvue/index.html" class="nav-link">index</a></li><li class="dropdown-item"><!----> <a href="/mpvue/mpvue-template-compiler.html" class="nav-link">mpvue-template-compiler</a></li><li class="dropdown-item"><!----> <a href="/mpvue/quickstart.html" class="nav-link">quickstart</a></li><li class="dropdown-item"><!----> <a href="/mpvue/simple.html" class="nav-link">Simple</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">changelog</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/change-log/index.html" class="nav-link">index</a></li><li class="dropdown-item"><!----> <a href="/change-log/2018.7.24.html" class="nav-link">2018.7.24</a></li></ul></div></div> <a href="https://github.com/mpvue/mpvue-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/qa.html" class="nav-link">Q&amp;A</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">build</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/build/index.html" class="nav-link">index</a></li><li class="dropdown-item"><!----> <a href="/build/mpvue-webpack-target.html" class="nav-link">mpvue-webpack-target</a></li><li class="dropdown-item"><!----> <a href="/build/postcss-mpvue-wxss.html" class="nav-link">postcss-mpvue-wxss</a></li><li class="dropdown-item"><!----> <a href="/build/px2rpx-loader.html" class="nav-link">px2rpx-loader</a></li><li class="dropdown-item"><!----> <a href="/build/mpvue-lint.html" class="nav-link">mpvue-lint</a></li><li class="dropdown-item"><!----> <a href="/build/webpack-mpvue-asset-plugin.html" class="nav-link">webpack-mpvue-asset-plugin</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">mpvue</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/mpvue/index.html" class="nav-link">index</a></li><li class="dropdown-item"><!----> <a href="/mpvue/mpvue-template-compiler.html" class="nav-link">mpvue-template-compiler</a></li><li class="dropdown-item"><!----> <a href="/mpvue/quickstart.html" class="nav-link">quickstart</a></li><li class="dropdown-item"><!----> <a href="/mpvue/simple.html" class="nav-link">Simple</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">changelog</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/change-log/index.html" class="nav-link">index</a></li><li class="dropdown-item"><!----> <a href="/change-log/2018.7.24.html" class="nav-link">2018.7.24</a></li></ul></div></div> <a href="https://github.com/mpvue/mpvue-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mpvue-loader"><a href="#mpvue-loader" aria-hidden="true" class="header-anchor">#</a> mpvue-loader</h1> <blockquote><p>我们是在 <a href="https://github.com/vuejs/vue-loader" target="_blank" rel="noopener noreferrer">vue-loader<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 上做的修改，增加了建构到<code>微信小程序</code> 的若干能力。除此之外与原 <a href="https://vue-loader.vuejs.org/" target="_blank" rel="noopener noreferrer">vue-loader 文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 保持一致，所以本文档只列下修改的地方。</p></blockquote> <p>如果你对 <a href="https://vue-loader.vuejs.org/" target="_blank" rel="noopener noreferrer">vue-loader<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>  不是很熟悉的话，强烈建议先阅读原文档一遍，下面的内容会默认你已经知道了什么是 vue-loader 和她能做什么。</p> <h2 id="开始"><a href="#开始" aria-hidden="true" class="header-anchor">#</a> 开始</h2> <p>mpvue-loader 是 vue-loader 的一个扩展延伸版，类似于超集的关系，除了 vue-loader 本身所具备的能力之外，它还会产出微信小程序所需要的文件结构和模块内容。</p> <h2 id="特性"><a href="#特性" aria-hidden="true" class="header-anchor">#</a> 特性</h2> <h3 id="entry"><a href="#entry" aria-hidden="true" class="header-anchor">#</a> entry</h3> <p>它会从 webpack 的配置中的 <code>entry</code> 开始，分析依赖模块，并分别打包。在entry 中 app 属性及其内容会被打包为微信小程序所需要的 <code>app.js／app.json／app.wxss</code>，其余的会生成对应的页面<code>page.js/page.json/page.wxml/page.wxss</code>，如示例的 entry 将会生成如下这些文件，文件内容下文慢慢讲来：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// webpack.config.js</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    entry<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        app<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./src/main.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>               <span class="token comment">// app 字段被识别为 app 类型</span>
+        index<span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./src/pages/index/main.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>   <span class="token comment">// 其余字段被识别为 page 类型</span>
+        <span class="token string">'news/home'</span><span class="token punctuation">:</span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./src/pages/news/home/index.js'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 产出文件的结构</span>
+<span class="token punctuation">.</span>
+├── app<span class="token punctuation">.</span>js
+├── app<span class="token punctuation">.</span>json
+├── app<span class="token punctuation">.</span>wxss
+├── components
+│   ├── card$<span class="token number">74</span>bfae61<span class="token punctuation">.</span>wxml
+│   ├── index$<span class="token number">023</span>eef02<span class="token punctuation">.</span>wxml
+│   └── news$<span class="token number">0699930</span>b<span class="token punctuation">.</span>wxml
+├── news
+│   ├── home<span class="token punctuation">.</span>js
+│   ├── home<span class="token punctuation">.</span>wxml
+│   └── home<span class="token punctuation">.</span>wxss
+├── pages
+│   └── index
+│       ├── index<span class="token punctuation">.</span>js
+│       ├── index<span class="token punctuation">.</span>wxml
+│       └── index<span class="token punctuation">.</span>wxss
+└── <span class="token keyword">static</span>
+    ├── css
+    │   ├── app<span class="token punctuation">.</span>wxss
+    │   ├── index<span class="token punctuation">.</span>wxss
+    │   └── news
+    │       └── home<span class="token punctuation">.</span>wxss
+    └── js
+        ├── app<span class="token punctuation">.</span>js
+        ├── index<span class="token punctuation">.</span>js
+        ├── manifest<span class="token punctuation">.</span>js
+        ├── news
+        │   └── home<span class="token punctuation">.</span>js
+        └── vendor<span class="token punctuation">.</span>js
+</code></pre></div><h3 id="wxml"><a href="#wxml" aria-hidden="true" class="header-anchor">#</a> wxml</h3> <p>每一个 <code>.vue</code> 的组件都会被生成为一个 wxml 规范的 template，然后通过 wxml 规范的 import 语法来达到一个复用，同时组件如果涉及到 props 的 data 数据，我们也会做相应的处理，举个实际的例子：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>{{msg}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>other-component</span> <span class="token attr-name">:msg</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>msg<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>other-component</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> otherComponent <span class="token keyword">from</span> <span class="token string">'./otherComponent.vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span> otherComponent <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> msg<span class="token punctuation">:</span> <span class="token string">'Hello Vue.js!'</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>这样一个 vue 的组件的模版部分会生成相应的 wxml</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>import</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>components/other-component$hash.wxml<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>component$hash<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>my-component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>_h1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{msg}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>other-component$hash<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">wx:</span>if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ $c[0] }}<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ ...$c[0] }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>细心的开发者可能已经注意到了 <code>other-component(:msg=&quot;msg&quot;)</code> 被转化成了</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>other-component$hash<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{{ ...$c[0] }}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>mpvue 在运行时会从根组件开始把所有的组件实例数据合并成一个树形的数据，然后通过 setData 到 appData,<code>$c</code> 是 <code>$children</code> 的缩写。至于那个 <code>0</code> 则是我们的 compiler 处理过后的一个标记，会为每一个子组件打一个特定的不重复的标记。
+树形数据结构如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 这儿数据结构是一个数组，index 是动态的</span>
+<span class="token punctuation">{</span>
+  $child<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'0'</span><span class="token punctuation">{</span>
+      <span class="token comment">// ... root data</span>
+      $child<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'0'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token comment">// ... data</span>
+          msg<span class="token punctuation">:</span> <span class="token string">'Hello Vue.js!'</span><span class="token punctuation">,</span>
+          $child<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// ...data</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="wxss"><a href="#wxss" aria-hidden="true" class="header-anchor">#</a> wxss</h3> <p>这个部分的处理同 web 的处理差异不大，唯一不同在于通过配置生成 <code>.css</code> 为 <code>.wxss</code> ，其中的对于 css 的若干处理，在 <a href="/build/postcss-mpvue-wxss/">postcss-mpvue-wxss</a> 和 <a href="/build/px2rpx-loader/">px2rpx-loader</a> 这两部分的文档中又详细的介绍。</p> <h3 id="app-json／page-json"><a href="#app-json／page-json" aria-hidden="true" class="header-anchor">#</a> app.json／page.json</h3> <p><code>1.1.1 以上</code></p> <p>推荐和小程序一样，将 app.json／page.json 放到页面入口处，使用 copy-webpack-plugin copy 到对应的生成位置。</p> <p><code>1.1.1 以下</code></p> <p>这部分内容来源于 app 和 page 的 entry 文件，通常习惯是 main.js，你需要在你的入口文件中 <code>export default { config: {} }</code>，这才能被我们的 loader 识别为这是一个配置，需要写成 json 文件。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./app'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> vueApp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+vueApp<span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 这个是我们约定的额外的配置</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这个字段下的数据会被填充到 app.json ／ page.json</span>
+    config<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        pages<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'static/calendar/calendar'</span><span class="token punctuation">,</span> <span class="token string">'^pages/list/list'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// Will be filled in webpack</span>
+        window<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            backgroundTextStyle<span class="token punctuation">:</span> <span class="token string">'light'</span><span class="token punctuation">,</span>
+            navigationBarBackgroundColor<span class="token punctuation">:</span> <span class="token string">'#455A73'</span><span class="token punctuation">,</span>
+            navigationBarTitleText<span class="token punctuation">:</span> <span class="token string">'美团汽车票'</span><span class="token punctuation">,</span>
+            navigationBarTextStyle<span class="token punctuation">:</span> <span class="token string">'#fff'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>同时，这个时候，我们会根据 entry 的页面数据，自动填充到 app.json 中的 <code>pages</code> 字段。
+<code>pages</code> 字段也是可以自定义的，约定带有 <code>^</code> 符号开头的页面，会放到数组的最前面。</p> <h3 id="style-scoped"><a href="#style-scoped" aria-hidden="true" class="header-anchor">#</a> style scoped</h3> <p>在 vue-loader 中对 style scoped 的处理方式是给每个样式加一个 attr 来标记 module-id，然后在 css 中也给每条 rule 后添加 <code>[module-id]</code>，最终可以形成一个 css 的“作用域空间”。</p> <p>在微信小程序中目前是不支持 attr 选择器的，所以我们做了一点改动，把 attr 上的 <code>[module-id]</code> 直接写到了 class 里，如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- .vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        // ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">.container</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- vue-loader --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-v-23e58823</span><span class="token punctuation">&gt;</span></span>
+        // ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">.container[data-v-23e58823]</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- mpvue-loader --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container data-v-23e58823<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        // ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">.container.data-v-23e58823</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="配置"><a href="#配置" aria-hidden="true" class="header-anchor">#</a> 配置</h2> <p>和 vue-loader 用法一致，讲讲额外注意的地方。</p> <h3 id="checkmpentry"><a href="#checkmpentry" aria-hidden="true" class="header-anchor">#</a> checkMPEntry</h3> <p>在 <a href="/build/#module">项目建构</a> 文档的这个部分，有讲到需要给所有 <code>js</code> 后缀文件增加 <code>mpvue-loader</code> ，并且需要加 options，通过这个配置，我们的 loader 才能知道 entry 进来的 js 和 vue 的类型是 app 还是 page，从而做了一些页面类型的区分。</p> <h2 id="typescript支持"><a href="#typescript支持" aria-hidden="true" class="header-anchor">#</a> TypeScript支持</h2> <p><code>mpvue-loader</code>目前支持用TypeScript来写，功能还在完善中(WIP)。目前实现了用<code>&lt;script lang=&quot;ts&quot; src=&quot;./xx.ts&quot;&gt;&lt;/script&gt;</code>这种方式的自动识别，并且需要搭配<a href="https://github.com/kaorun343/vue-property-decorator" target="_blank" rel="noopener noreferrer">vue-property-decorator<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>来使用。</p> <h3 id="配置-2"><a href="#配置-2" aria-hidden="true" class="header-anchor">#</a> 配置</h3> <h4 id="添加对应的loader"><a href="#添加对应的loader" aria-hidden="true" class="header-anchor">#</a> 添加对应的<code>loader</code></h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// webpack.conf.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token punctuation">:</span> <span class="token regex">/\.vue$/</span><span class="token punctuation">,</span>
+        loader<span class="token punctuation">:</span> <span class="token string">'mpvue-loader'</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token comment">//...</span>
+          ts<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token comment">//添加对应vue的loader</span>
+            <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+              <span class="token comment">// loader: 'ts-loader',</span>
+              loader<span class="token punctuation">:</span> <span class="token string">'awesome-typescript-loader'</span><span class="token punctuation">,</span>
+              options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token comment">// errorsAsWarnings: true,</span>
+                useCache<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// ts文件的loader</span>
+      <span class="token punctuation">{</span>
+        test<span class="token punctuation">:</span> <span class="token regex">/\.tsx?$/</span><span class="token punctuation">,</span> 
+        exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
+        use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            loader<span class="token punctuation">:</span> <span class="token string">'mpvue-loader'</span><span class="token punctuation">,</span>
+            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              checkMPEntry<span class="token punctuation">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            <span class="token comment">// loader: 'ts-loader',</span>
+            loader<span class="token punctuation">:</span> <span class="token string">'awesome-typescript-loader'</span><span class="token punctuation">,</span>
+            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              <span class="token comment">// errorsAsWarnings: true,</span>
+              useCache<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h3 id="main-ts"><a href="#main-ts" aria-hidden="true" class="header-anchor">#</a> main.ts</h3> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// main.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> Emit<span class="token punctuation">,</span> Inject<span class="token punctuation">,</span> Model<span class="token punctuation">,</span> Prop<span class="token punctuation">,</span> Provide<span class="token punctuation">,</span> Vue<span class="token punctuation">,</span> Watch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> VueConstructor <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">IMpVue</span> <span class="token keyword">extends</span> <span class="token class-name">VueConstructor</span> <span class="token punctuation">{</span>
+  mpType<span class="token punctuation">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 添加小程序hooks http://mpvue.com/mpvue/#_4</span>
+Component<span class="token punctuation">.</span><span class="token function">registerHooks</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token comment">// app</span>
+  <span class="token string">'onLaunch'</span><span class="token punctuation">,</span> <span class="token comment">// 初始化</span>
+  <span class="token string">'onShow'</span><span class="token punctuation">,</span> <span class="token comment">// 当小程序启动，或从后台进入前台显示</span>
+  <span class="token string">'onHide'</span><span class="token punctuation">,</span> <span class="token comment">// 当小程序从前台进入后台</span>
+  <span class="token comment">// pages</span>
+  <span class="token string">'onLoad'</span><span class="token punctuation">,</span> <span class="token comment">// 监听页面加载</span>
+  <span class="token string">'onShow'</span><span class="token punctuation">,</span> <span class="token comment">// 监听页面显示</span>
+  <span class="token string">'onReady'</span><span class="token punctuation">,</span> <span class="token comment">// 监听页面初次渲染完成</span>
+  <span class="token string">'onHide'</span><span class="token punctuation">,</span> <span class="token comment">// 监听页面隐藏</span>
+  <span class="token string">'onUnload'</span><span class="token punctuation">,</span> <span class="token comment">// 监听页面卸载</span>
+  <span class="token string">'onPullDownRefresh'</span><span class="token punctuation">,</span> <span class="token comment">// 监听用户下拉动作</span>
+  <span class="token string">'onReachBottom'</span><span class="token punctuation">,</span> <span class="token comment">// 页面上拉触底事件的处理函数</span>
+  <span class="token string">'onShareAppMessage'</span><span class="token punctuation">,</span> <span class="token comment">// 用户点击右上角分享</span>
+  <span class="token string">'onPageScroll'</span><span class="token punctuation">,</span> <span class="token comment">// 页面滚动</span>
+  <span class="token string">'onTabItemTap'</span><span class="token punctuation">,</span> <span class="token comment">//当前是 tab 页时， 点击 tab 时触发 （mpvue 0.0.16 支持）</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token comment">// 在这个地方引入是为了registerHooks先执行</span>
+<span class="token keyword">const</span> MyApp <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'./App.vue'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">default</span> <span class="token keyword">as</span> IMpVue
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span>MyApp<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="app-vue"><a href="#app-vue" aria-hidden="true" class="header-anchor">#</a> App.vue</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./app.ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">//app.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">&quot;vue/types/vue&quot;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+    $mp<span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 必须使用装饰器的方式来指定components</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mpType<span class="token punctuation">:</span> <span class="token string">'app'</span><span class="token punctuation">,</span> <span class="token comment">// mpvue特定</span>
+<span class="token punctuation">}</span><span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  <span class="token comment">// app hook</span>
+  <span class="token function">onLaunch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> opt <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$root<span class="token punctuation">.</span>$mp<span class="token punctuation">.</span>appOptions
+  <span class="token punctuation">}</span>
+
+  <span class="token function">onShow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">onHide</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// vue hook</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App
+</code></pre></div><h3 id="页面"><a href="#页面" aria-hidden="true" class="header-anchor">#</a> 页面</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!-- page.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>counter-warp<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Mpvue<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>ts value {{ ver }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>card</span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>card component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>card</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>comp-b</span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>card component<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>comp-b</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">:href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>AppUrls.COUNTER<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>home<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>去往vuex<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--必须指定为ts--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./index.ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// index.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span>
+<span class="token keyword">import</span> Card <span class="token keyword">from</span> <span class="token string">'@/components/card.vue'</span> <span class="token comment">// mpvue目前只支持的单文件组件</span>
+<span class="token keyword">import</span> CompB <span class="token keyword">from</span> <span class="token string">'@/components/compb.vue'</span> <span class="token comment">// mpvue目前只支持的单文件组件</span>
+<span class="token comment">// 必须使用装饰器的方式来指定component</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    Card<span class="token punctuation">,</span>
+    CompB<span class="token punctuation">,</span> <span class="token comment">//注意，vue的组件在template中的用法，`CompB` 会被转成 `comp-b`</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Index</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  ver<span class="token punctuation">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> <span class="token number">123</span>
+  
+  <span class="token function">onShow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 小程序 hook</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// vue hook</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Index
+</code></pre></div><h3 id="组件"><a href="#组件" aria-hidden="true" class="header-anchor">#</a> 组件</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!-- card.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>card<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      From Card {{text}} {{ver}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--必须指定为ts--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./card.ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// card.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Prop <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span>
+<span class="token comment">// 必须使用装饰器的方式来指定component</span>
+@Component
+<span class="token keyword">class</span> <span class="token class-name">Card</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'1'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">//注意用法！</span>
+  text<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  
+  ver<span class="token punctuation">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+  <span class="token function">onShow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">onHide</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// vue hook</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CompB
+</code></pre></div><h3 id="示例demo"><a href="#示例demo" aria-hidden="true" class="header-anchor">#</a> 示例Demo</h3> <p>示例: <a href="https://github.com/WingGao/mpvue-ts-demo" target="_blank" rel="noopener noreferrer">mpvue-ts-demo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a1edbc94.js" defer></script><script src="/assets/js/2.46a8cc8f.js" defer></script><script src="/assets/js/10.949dbce8.js" defer></script>
+  </body>
+</html>
