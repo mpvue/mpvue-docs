@@ -128,7 +128,13 @@ mpvue 在运行时会从根组件开始把所有的组件实例数据合并成�
 
 `1.1.1 以上`
 
-推荐和小程序一样，将 app.json／page.json 放到页面入口处，使用 copy-webpack-plugin copy 到对应的生成位置。
+推荐和小程序一样，将 app.json(全局配置)／page.json(页面配置) 放到页面入口处，使用 copy-webpack-plugin copy 到对应的生成位置。
+
+按照微信小程序的[官方要求](https://developers.weixin.qq.com/miniprogram/dev/framework/structure.html)：
+
+> 注意：为了方便开发者减少配置项，描述页面的四个文件必须具有相同的路径与文件名。
+
+对应在mpvue里面，页面配置的json文件的最终命名应该和对应页面的 entry 文件名一致。目前mpvue里面通常习惯把页面的 entry 文件命名为 main.js，所以你的 page.json 的命名应该是 main.json。这样才能保证页面配置生效
 
 `1.1.1 以下`
 
