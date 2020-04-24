@@ -6,6 +6,10 @@ module.exports = {
   ],
   base: '/',
   themeConfig: {
+    algolia: {
+      apiKey: 'cf0e99a1a6068ecc4ed40f54869d4735',
+      indexName: 'mpvue'
+    },
     repo: 'https://github.com/mpvue/mpvue-docs',
     docsDir: 'docs',
     docsBranch: 'master',
